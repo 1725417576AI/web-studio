@@ -1,0 +1,4 @@
+preview-*.png
+报价单.pdf
+*.bak
+__pycache__/

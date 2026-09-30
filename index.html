@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>小站工坊 · 网站搭建服务 | 3天上线,按需求收费</title>
+<meta name="description" content="给本地商家做网站:展示站、预约/点单系统。明码标价,3天交付,手机端自适应,交付后教你怎么改。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234f46e5'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='white' font-family='sans-serif'%3E%E5%B0%8F%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark';</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= 顶部导航 ================= -->
+<header class="topbar">
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">◆ 小站工坊</a>
+    <ul class="links" id="nav-links">
+      <li><a href="#price">价格</a></li>
+      <li><a href="#works">案例</a></li>
+      <li><a href="#flow">流程</a></li>
+      <li><a href="#faq">常见问题</a></li>
+      <li><a href="#contact">联系我</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" title="切换深浅色" aria-label="切换深浅色">🌙</button>
+      <button class="burger" id="nav-toggle" aria-label="菜单">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 首屏 ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="tag">接单中 · 本月还剩 2 个名额</p>
+    <h1>给你做一个<br><span class="grad">能收钱的小网站</span></h1>
+    <p class="sub">
+      展示站、预约页、点单系统。明码标价、3 天上线、手机自适应。<br>
+      交付时教你怎么自己改价格和图片,不用求人。
+    </p>
+    <div class="btns">
+      <a class="btn primary" href="#price">看价格 →</a>
+      <a class="btn ghost" href="#works">看案例</a>
+    </div>
+    <ul class="facts">
+      <li><b>3–7 天</b><span>交付时间</span></li>
+      <li><b>1280 元起</b><span>明码标价</span></li>
+      <li><b>手机自适应</b><span>电脑手机都好看</span></li>
+      <li><b>微信随时改</b><span>交付后 7 天内免费改 3 次</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= 价格(套餐数据在 script.js 顶部改) ================= -->
+<section class="sec" id="price">
+  <div class="wrap">
+    <h2>套餐价格</h2>
+    <p class="lead">都是做完整站、交源码、包上线。不含智商税,不满意交付前可退。</p>
+    <div class="cards" id="price-cards"><!-- JS 渲染 --></div>
+    <p class="note">
+      不确定选哪个?直接把你的需求微信发我,我 10 分钟内告诉你选哪档、多少钱。
+    </p>
+  </div>
+</section>
+
+<!-- ================= 案例(占位,做完一单就换掉) ================= -->
+<section class="sec alt" id="works">
+  <div class="wrap">
+    <h2>做过的站</h2>
+    <p class="lead">点开就是真站,不是效果图。</p>
+    <div class="works" id="work-list"><!-- JS 渲染 --></div>
+    <p class="note">
+      想看你所在行业的样子?说一声,我可以现场做一个同类页面给你看,不满意不收钱。
+    </p>
+  </div>
+</section>
+
+<!-- ================= 流程 ================= -->
+<section class="sec" id="flow">
+  <div class="wrap">
+    <h2>怎么合作</h2>
+    <ol class="steps">
+      <li><b>1 · 加微信聊需求</b><span>你说行业和想干的事,我给方案和报价,不推销。</span></li>
+      <li><b>2 · 付 30% 定金开工</b><span>定金后我开始做,期间给你看进度链接。</span></li>
+      <li><b>3 · 验收改到满意</b><span>你能直接点开预览,提修改意见,改到你说 OK。</span></li>
+      <li><b>4 · 上线 + 交付 + 教会你</b><span>付尾款,帮你绑域名上线,10 分钟视频教你改内容。</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= 常见问题 ================= -->
+<section class="sec alt" id="faq">
+  <div class="wrap">
+    <h2>常见问题</h2>
+    <div class="faq" id="faq-list"><!-- JS 渲染 --></div>
+  </div>
+</section>
+
+<!-- ================= 联系 ================= -->
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <h2>加个微信,先聊聊</h2>
+    <!-- 二维码文件 qr.png,页面自动挂载;微信号那一串客户搜不到,所以只引导扫码 -->
+    <p class="lead">扫描下方二维码加我微信<span class="hint">(加好友请备注「网站」)</span></p>
+    <p class="lead">或者直接把你想要的网站样子发我,我给你报个价。</p>
+    <div class="qr ph" id="qr-box">【待填充:把微信二维码图片存成 qr.png 放进本文件夹,自动显示】</div>
+    <p class="note small">
+      不接:赌博、贷款、刷单、任何需要作假和违规的站。
+    </p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>© <span id="year"></span> 小站工坊 · 个人工作室 · 域名/服务器费用按实际另算,不含税费</p>
+  </div>
+</footer>
+
+<button id="top-btn" title="回到顶部">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
